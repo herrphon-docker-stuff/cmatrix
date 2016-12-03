@@ -3,4 +3,5 @@ version: "2"
 services:
   cmatrix:
     build: .
+    image: herrphon/cmatrix
 

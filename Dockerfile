@@ -1,10 +1,10 @@
 FROM ubuntu
 
-# Install packages.
-RUN apt-get update && \
-    apt-get install -y cmatrix && \
-    rm -rf /var/lib/apt/lists/*
+ENV DEBIAN_FRONTEND noninteractive
 
-# Define default command.
+RUN apt-get update \
+ && apt-get install -y cmatrix \
+ && rm -rf /var/lib/apt/lists/*
+
 CMD ["cmatrix"]
 
